@@ -11,7 +11,6 @@ const API_OPENSEA =
 function App() {
   const [data, setData] = useState([]);
   const [active, setActive] = useState({});
-  console.log(active, "acitve");
 
   const handleClick = (values) => setActive(values);
 
