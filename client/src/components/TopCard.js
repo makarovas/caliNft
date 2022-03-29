@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import "./TopCard.css";
 const TopCard = (active) => {
   const [data, setData] = useState(active);
-  console.log(active);
   useEffect(() => setData(data), [active, data]);
   const { image, name, id, address } = active.active;
   if (!active.active.image) return null;
@@ -19,7 +18,6 @@ const TopCard = (active) => {
           </div>
           <div className="owner-details">
             <div className="owner-image-container">
-              {/* <img src="" alt="" className="owner-image" /> */}
               <div className="owner-circle" />
               <span className="owner-address">{address}</span>
             </div>

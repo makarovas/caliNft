@@ -3,6 +3,7 @@ import "./Header.css";
 import logo from "../assets/header/icon-15.jpg";
 import searchIcon from "../assets/header/search.png";
 import themeSwitcher from "../assets/header/theme-switch.png";
+
 const Header = () => {
   return (
     <div className="header">

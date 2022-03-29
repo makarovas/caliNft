@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import "./app.css";
 import axios from "axios";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Collection from "./components/Collection";
 import TopCard from "./components/TopCard";
 
@@ -23,8 +23,6 @@ function App() {
 
     return getNfts();
   }, []);
-
-  // console.log("render", active);
 
   return (
     <div className="app">
