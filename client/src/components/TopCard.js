@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./TopCard.css";
-const TopCard = ({
-  image_original_url = "https://lh3.googleusercontent.com/GHfpF_0WRmTl0bgiu1N1tJ-SnfIgitItnMbK-BG52EgdI7oVCmD5c3LUBu8gl1cZ0wbX6rLmpFVZUpe7FISyMKG4POK8da8GJllvgqI",
-  name = "COCACla",
-  id = "32",
-  address = "3lk2j4lk2jlkjlkj",
-}) => {
+const TopCard = (active) => {
+  const [data, setData] = useState(active);
+  console.log(active);
+  useEffect(() => setData(data), [active, data]);
+  const { image, name, id, address } = active.active;
+  if (!active.active.image) return null;
   return (
     <div className="main">
       <div className="main-content">
         <div className="main-highlight">
-          <img src={image_original_url} alt="top" />
+          <img src={image} alt="top" />
         </div>
         <div className="details">
           <div className="main-details">
