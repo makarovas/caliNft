@@ -1,7 +1,7 @@
 import React from "react";
 import "./CollectionCard.css";
 
-const CollectionCard = ({ id, name, traits, image, weth }) => {
+const CollectionCard = ({ id, name, traitsValue, image, weth }) => {
   return (
     <div className="collection-card">
       <img src={image} alt="card" className="collection-card-image" />
@@ -14,7 +14,7 @@ const CollectionCard = ({ id, name, traits, image, weth }) => {
         </div>
         <div className="price-container">
           <img src={weth} alt="card" className="weth-image" />
-          <div className="price">{traits[0]?.value}</div>
+          <div className="price">{traitsValue.value}</div>
         </div>
       </div>
     </div>
